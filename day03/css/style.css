@@ -35,3 +35,49 @@
     background-color: aqua;
     
 }
+
+.container {
+    width: 400px;
+    height: 400px;
+    background-color: aqua;
+    margin: auto;
+    /* padding: 100px 0 100px 0; */
+}
+
+.box {
+    margin: auto;
+    width: 100px;
+    height: 100px;
+    background-color: brown;
+}
+
+.box2 {
+    width: 100px;
+    height: 100px;
+    background-color: brown;
+    margin: auto;
+}
+
+.box3{
+    width: 100px;
+    height: 100px;
+    background-color: brown;
+    display: inline-block;
+    margin-left: 50px;
+}
+
+.box4 {
+    width: 100px;
+    height: 100px;
+    background-color: brown;
+    display: inline-block;
+    margin-left: 96px;
+}
+
+.box5 {
+    width: 100px;
+    height: 100px;
+    background-color: brown;
+    margin: auto;
+    margin-top: -4px;
+}
