@@ -6,3 +6,5 @@
 [Task Code](https://github.com/Umberban/boot_camp/tree/master/1day);
 [Module01](https://umberban.github.io/boot_camp/html-css/module_1-2/module1.html);
 [Module01 Code](https://github.com/Umberban/boot_camp/tree/master/html-css/module_1-2)
+[Task module 3](https://umberban.github.io/boot_camp/html-css/module_3/index.html);
+[Task module 3 Code](https://github.com/Umberban/boot_camp/tree/master/html-css/module_3)
