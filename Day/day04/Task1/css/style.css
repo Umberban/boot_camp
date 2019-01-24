@@ -6,17 +6,20 @@ font-family: 'Indie Flower', cursive; */
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    /* margin-bottom: 30px; */
 }
 
 .wrapper {
     max-width: 960px;
     margin: auto;
+    padding-bottom: 30px;
+    /* margin-bottom: 30px; */
 }
 
 
-.parallax{
+.parallax {
     background-position: center center;
-    background-attachment: fixed ;
+    background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
@@ -25,14 +28,17 @@ font-family: 'Indie Flower', cursive; */
 
 .tower {
     background-image: url(../img/1.jpg);
+    margin-bottom: 30px;
 }
 
 .metro {
     background-image: url(../img/2.jpg);
+    margin-bottom: 30px;
 }
 
 .lens {
     background-image: url(../img/3.jpg);
+    margin-bottom: 30px;
 }
 
 .hightower {
@@ -40,6 +46,7 @@ font-family: 'Indie Flower', cursive; */
     font-size: 20px;
     text-indent: 20px;
     word-spacing: 30px;
+    margin-bottom: 30px;
 }
 
 .metrocity {
@@ -47,6 +54,7 @@ font-family: 'Indie Flower', cursive; */
     letter-spacing: 7px;
     font-size: 20px;
     text-indent: 20px;
+    margin-bottom: 30px;
 }
 
 .lenscity {
@@ -55,18 +63,25 @@ font-family: 'Indie Flower', cursive; */
     text-indent: 20px;
     word-spacing: 10px;
     font-weight: 600;
-}
-
-p::first-letter {
-    font-size: 36px;
-    color: blueviolet;
-}
-
-h2::first-letter {
-    font-size: 50px;
-    color: violet;
+    margin-bottom: 30px;
 }
 
 .name {
     text-align: center;
+    color: blueviolet;
+}
+
+.yelow {
+    font-size: 30px;
+    color: yellow;
+}
+
+.green {
+    font-size: 30px;
+    color: green;
+}
+
+.red {
+    font-size: 30px;
+    color: red;
 }
