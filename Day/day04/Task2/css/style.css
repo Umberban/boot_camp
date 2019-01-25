@@ -15,6 +15,7 @@ header {
     padding-top: 286px;
     padding-bottom: 115px;
     height: 1072px;
+    background-color: #3c3c3c;
 }
 
 p {
@@ -96,6 +97,7 @@ p {
     background-repeat: no-repeat;
     padding-top: 128px;
     padding-bottom: 109px;
+    background-color: #3c3c3c;
 }
 
 
@@ -217,6 +219,7 @@ ul li {
     height: auto;
     vertical-align: top;
     text-transform: uppercase;
+    margin-bottom: 4px;
 }
 
 .top {
@@ -232,6 +235,7 @@ ul li {
 .market {
     background-image: url(../img/c.png);
     width: 30%;
+    margin-right: -4px;
 }
 
 .worktop {
@@ -244,9 +248,14 @@ ul li {
     width: 39%;
 }
 
+ul{
+    margin-right: -4px;
+}
+
 .kyiv {
     background-image: url(../img/f.png);
     width: 30%;
+    margin-right: -4px;
 }
 
 footer {
