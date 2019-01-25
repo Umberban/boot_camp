@@ -7,14 +7,13 @@
 
 header {
     width: 100%;
-    background-image: url(/img/1.png);
+    background-image: url(../img/1.png);
     background-position: center center;
-    /* background-attachment: fixed; */
+    background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
     padding-top: 286px;
     padding-bottom: 115px;
-    height: 1072px;
     background-color: #3c3c3c;
 }
 
@@ -92,7 +91,7 @@ p {
     width: 100%;
     background-image: url(/img/2.png);
     background-position: center center;
-    /* background-attachment: fixed; */
+    background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
     padding-top: 128px;
