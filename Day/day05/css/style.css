@@ -682,8 +682,8 @@ p {
 }
 
 .tadam::before {
-    content: '';
-    background-image: url(../img/logo2.png);
+    content: url(../img/logo2.png);
+    /* background-image: url(../img/logo2.png); */
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -697,8 +697,121 @@ p {
     padding-bottom: 10px;
 }
 
+.tagam p {
+    font-weight: 100;
+}
+
 .tadam {
     color: #00e0d0;
     text-decoration: none;
     font-size: 30px;
+    vertical-align: top;
+}
+
+.place {
+    font-size: 15px;
+    margin-bottom: 39px;
+    text-transform: uppercase;
+}
+
+.point::before {
+    content: url(../img/point.png);
+    display: inline-block;
+    width: 14px;
+    height: 19px;
+    margin-right: 5px;
+}
+
+.ourstudio li:nth-child(3) {
+    margin-left: 19px;
+}
+
+.ourstudio li:nth-child(4) {
+    margin-left: 19px;
+}
+
+.tel::before {
+    content: url(../img/phone.png);
+    display: inline-block;
+    width: 14px;
+    height: 19px;
+    margin-right: 5px;
+}
+
+.ourstudio a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 100;
+}
+
+.ourstudio li {
+    margin-bottom: 20px;
+}
+
+.stayintouch {
+    font-size: 15px;
+    text-transform: uppercase;
+    margin-bottom: 39px;
+}
+
+.massege li:first-child {
+    border: 1px solid #413d4b;
+    line-height: 45px;
+    width: 215px;
+    text-align: center;
+    margin-right: 10px;
+}
+
+.massege li:last-child {
+    width: 70px;
+    height: 45px;
+    background-color: #9f98b28b;
+    padding-top: 10px;
+
+}
+
+.plane {
+    width: 25px;
+    height: 25px;
+    display: block;
+    margin: auto;
+}
+
+.massege {
+    margin-bottom: 35px;
+}
+
+.socials li {
+    background-image: url(../img/circle.png);
+    width: 35px;
+    height: 35px;
+    padding: 8px 0 0 10px;
+}
+
+.settings {
+    float: left;
+    list-style: none;
+}
+
+.settings li {
+    float: left;
+    margin-left: 50px;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+.settings a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.rights {
+    float: right;
+    font-size: 14px;
+    font-weight: 100;
+}
+
+.end {
+    margin-bottom: 82px;
 }
