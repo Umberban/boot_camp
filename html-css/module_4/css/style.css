@@ -82,6 +82,10 @@ header {
     margin: 32px auto 92px;
 }
 
+.things {
+    width: 100%;
+}
+
 .things li {
     float: left;
     list-style: none;

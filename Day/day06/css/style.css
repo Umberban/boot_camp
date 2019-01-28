@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+.awesome {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    position: relative;
+    padding: 138px 0 184px 0;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+.wrapper {
+    max-width: 1140px;
+    margin: auto;
+}
+
+.feature {
+    color: #ff0000;
+    text-transform: uppercase;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.awesomeFeauters {
+    font-size: 40px;
+    margin-bottom: 91px;
+}
+
+.menu {
+    display: inline-block;
+    list-style: none;
+    margin: 20px;
+}
+
+.menu li:first-child {
+    margin-bottom: 30px;
+}
+
+.fut{
+    font-size: 22px;
+    margin-bottom: 19px;
+}
+
+.menu p {
+    font-size: 16px;
+    color: rgba(40, 40, 40, 255);
+}
+
+.pen {
+    position: absolute;
+    left: 0px;
+    top: -25px;
+}
+
+.ear {
+    position: absolute;
+    right: 0px;
+    top: -20px;
+}
+.cup {
+    position: absolute;
+    bottom: -130px;
+    right: 0px;
+}
+
+img {
+    background: transparent;
+}
+
+.platform {
+    width: 100%
+}
+
+.wrapper3 {
+    max-width: 571px;
+    text-align: left;
+    margin: auto;
+    padding: 191px 0 161px 0;
+    
+}
+
+.platform1 {
+    font-size: 40px;
+    margin-bottom: 50px;
+}
+
+.platform1::after {
+    content: '....';
+    color: red;
+    font-size: 40px;
+}
+
+.text {
+    color: rgba(40, 40, 40, 255);
+    font-size: 16px;
+}
+
+.text p {
+    margin-bottom: 20px;
+}
+
+.sqere {
+    display: inline-block;
+    width: 30%;
+    height: 724px;
+    background-color: #ececec;
+    vertical-align: top;
+    overflow: hidden;
+    /* position: relative; */
+    
+}
+
+.redSqer {
+    max-width: 678px;
+    height: 724px;
+    background-color: #fb8686;
+    transform: rotate(45deg);
+    position: relative;
+    top: 250px;
+    left: 250px;
+}
+
+.wrapper2 {
+    width: 69%;
+    display: inline-block;
+}
+
+.mac {
+    display: block;
+    position: absolute;
+    z-index: 2;
+    width: 500px;
+    /* top: 100px;
+    left: 50px; */
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+
+.sqere1 {
+    display: inline-block;
+    width: 40%;
+    height: 724px;
+    background-color: #ececec;
+    vertical-align: top;
+    overflow: hidden;
+    position: relative;
+    
+}
+
+.redSqer1 {
+    max-width: 678px;
+    height: 724px;
+    background-color: #fb8686;
+    transform: rotate(45deg);
+    position: relative;
+    top: 250px;
+    left: 250px;
+}
+
+.wrapper4 {
+    width: 59%;
+    display: inline-block;
+}
+
+.wrapper5 {
+    max-width: 450px;
+    text-align: left;
+    margin: auto;
+    padding: 141px 0 146px 0;
+    
+}
