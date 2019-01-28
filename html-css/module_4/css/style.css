@@ -85,9 +85,9 @@ header {
 .things li {
     float: left;
     list-style: none;
-    width: 255px;
-    
+    max-width: 255px;
     margin: 15px;
+
 }
 
 .pic img {
@@ -167,6 +167,7 @@ header {
 
 .things a {
     text-align: left;
+    max-width: 255px;
 }
 
 .price1  {
