@@ -86,13 +86,20 @@ header {
     float: left;
     list-style: none;
     width: 255px;
-    background-color: #e9f0fd;
-    margin: 10px;
+    
+    margin: 15px;
+}
+
+.pic img {
+    margin: auto;
 }
 
 .pic {
     display: block;
     height: 282px;
+    background-color: #e9f0fd;
+    width:255px;
+    margin: auto;
 }
 
 .pic1 {
@@ -133,11 +140,16 @@ header {
 .pic8 {
     height:282px;
     padding-top: 50px;
+    background-color: #e9f0fd;
+    width: 255px;
+    margin: auto;
+    display: block;
 }
 
 .pic9 {
     width: 180px;
     height:98px;
+    margin: auto;
 }
 
 .productName p {
