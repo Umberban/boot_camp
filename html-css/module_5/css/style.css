@@ -81,6 +81,7 @@ header {
     color: #ffffff;
     text-transform: uppercase;
     text-align: left;
+    margin-bottom: 20px;
 }
 
 .affordable {
@@ -102,7 +103,7 @@ header {
     height: 104px;
     font-size: 80px;
     display: inline-block;
-    margin-right: 10px;
+    margin-right: 100px;
 }
 
 .affordable::after {
@@ -113,7 +114,7 @@ header {
     height: 104px;
     font-size: 80px;
     display: inline-block;
-    margin-left: 10px;
+    margin-left: 100px;
 }
 
 .list {
