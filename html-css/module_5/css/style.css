@@ -149,7 +149,7 @@ header {
     margin-right: 30px;
 }
 
-.productName p {
+.productName  {
     width: 201px;
     background-color: #323232;
     color: #ffffff;
@@ -160,7 +160,7 @@ header {
     text-transform: uppercase;
 }
 
-.price1 {
+.price {
     width: 54px;
     background-color: #32323279;
     color: #ffffff;
@@ -194,6 +194,7 @@ header {
     margin: 2px;
     margin-bottom: 4px;
     vertical-align: middle;
+    padding-top: 10px;
 }
 
 .subMenu li:last-child {
@@ -225,10 +226,21 @@ header {
     
 }
 
-a:hover {
+.menu-item:hover .productName {
     background-color: #00e0d0;
 }
 
-p:hover {
+.menu-item:hover .price {
+    background-color: #00e0d151;
+}
+
+
+.cart {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 7px;
+}
+
+.subMenu li:hover {
     background-color: #00e0d0;
 }
