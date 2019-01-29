@@ -145,7 +145,7 @@ header {
     max-width: 255px;
     position: relative;
     margin-right: -4px;
-    margin-bottom: -4px;
+    margin-bottom: 30px;
     height: 322px;
     margin-right: 30px;
 }
@@ -212,10 +212,10 @@ header {
 
 .subMenu {
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
     width: 250px;
-    height: 272px;
+    height: 290px;
     transform: translate( -50%, -50%);
     background-color: #32323284;
     padding-top: 100px;
@@ -245,3 +245,4 @@ header {
 .subMenu li:hover {
     background-color: #00e0d0;
 }
+
