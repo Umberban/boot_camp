@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main {
+    width: 100%;
+}
+
+header {
+    width: 100%;
+    background-image: url(../img/head.png);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 10px 0 336px 0;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-evenly;
+    list-style:none;
+    align-items:center;
+}
+
+.menu a {
+    text-decoration: none;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #000000;
+    font-weight: bold;
+}
+
+
+.menu li:hover {
+    border-bottom: #000000 solid 3px;
+}
+
+.wrapper {
+    width: 100%;
+    display: flex;
+}
+
+.about {
+    background-image: url(../img/about.png);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 50%;
+    padding: 208px 0 192px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.about p {
+    border:5px solid #000000;
+    font-size: 36px;
+    width: 300px;
+    line-height: 100px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    padding: 91px 127px 140px 85px;
+}
+
+.minLogo {
+    margin-bottom: 31px;
+}
+
+.lor {
+    margin-bottom: 32px;
+    font-size: 18px;
+    padding: 0 27px 0 22px;
+}
+
+.text p {
+    text-align: center;
+    font-size: 16px;
+}
+
+img {
+    display: block;
+}
+
+.wrapper1 {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.wrapper1 img {
+    max-width: 224.83px;
+}
+
+.sec4 {
+    background-image: url(../img/sec4.png);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    padding: 114px 0 56px 0;
+}
+
+.wrapper2 {
+    max-width: 859px;
+    margin: auto;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; */
+}
+
+.sign1{
+justify-content: flex-end;
+    max-width: 859px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.sign {
+    font-size: 18px;
+    text-transform: uppercase;
+    font-style: italic;
+    color: #ffffff;
+    font-weight: 100;
+
+}
+
+.citata p {
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 800;
+    color: #ffffff;
+    text-align: center;
+}
+
+.citata::before {
+    content: '\201C';
+    font-size: 100px;
+    color: #ffffff;
+}
+
+.citata::after {
+    content: '\201D';
+    font-size: 100px;
+    color: #ffffff;
+    text-align: right;
+    margin-left: 825px;
+}
+
+.team {
+    max-width:449.66px
+}
