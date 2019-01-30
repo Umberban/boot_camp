@@ -39,7 +39,9 @@ header {
     display: flex;
     list-style: none;
     justify-content: space-between;
-    min-width: 400px;
+    /* min-width: 400px; */
+    width: 35%;
+    min-width: 350px
 }
 
 .menu a {
@@ -161,8 +163,8 @@ header {
 }
 
 .social a {
-    width: 56px;
-    height: 56px;
+    min-width: 56px;
+    min-height: 56px;
     background-color: #fce38a;
     display: flex;
     justify-content: center;
@@ -181,7 +183,7 @@ header {
 
 .social a:hover img {
     transform: rotate(360deg);
-    transition: all 1s ease;
+    transition: all 1.5s ease;
 }
 
 .real:hover {
