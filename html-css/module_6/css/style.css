@@ -55,7 +55,7 @@ header {
 }
 
 .work {
-    padding: 128px 0 92px 0;
+    padding: 128px 0 1px 0;
 }
 
 .head {
@@ -96,8 +96,9 @@ header {
 .services li {
     max-width: 329px;
     display: flex;
-    /* margin-bottom: 99px; */
-    height: 150px;
+    margin-bottom: 99px;
+    /* height: 150px; */
+
 }
 
 .photo {
@@ -163,7 +164,7 @@ header {
    
 }
 
-.social li {
+.social a {
     width: 56px;
     height: 56px;
     background-color: #fce38a;
@@ -178,8 +179,13 @@ header {
     transform: translateY(483px);
 }
 
-.social li:hover {
-    background-color: #95e1d3;
+.social a:hover {
+    background-color: #31c8ad;
+}
+
+.social a:hover img {
+    transform: rotate(360deg);
+    transition: all 2s ease;
 }
 
 .real:hover {
@@ -254,7 +260,7 @@ span {
     color: #f38181;
 }
 
-.real:hover li {
+.real:hover a {
     transition: all 2s ease;
     transform: rotate(360deg);
 }
