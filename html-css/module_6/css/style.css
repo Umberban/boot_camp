@@ -253,3 +253,8 @@ footer {
 span {
     color: #f38181;
 }
+
+.real:hover li {
+    transition: all 2s ease;
+    transform: rotate(360deg);
+}
