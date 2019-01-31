@@ -1,0 +1,293 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    max-width: 480px;
+    margin: auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 16px;
+    align-items: center;
+}
+
+.banner {
+    background-image: url(../img/1.png);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    padding: 150px 0 150px 0;
+    max-width: 480px;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner h2 {
+    color: #fff;
+    font-size: 50px;
+    text-transform: uppercase;
+}
+
+.album {
+    display: flex;
+    flex-direction: column;
+}
+
+.pic {
+    background-image: linear-gradient(to right, #1f3661c6, #1d3969c6), url(../img/2back.png);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    max-width: 480px;
+
+}
+
+.disc {
+    margin: auto;
+    text-align: left;
+    font-size: 16px;
+    background-color: #ffffff;
+    padding: 100px 75px 100px 75px;
+
+}
+
+.disc h2 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.disc p {
+    margin-bottom: 20px;
+}
+
+.vid {
+    background-image: url(../img/deadmau5-cube@1X.png);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    max-width: 480px;
+    justify-content: center;
+    align-items: center;
+    padding: 150px 0 150px 0;
+}
+
+.mainEvent {
+    display: flex;
+    flex-direction: column;
+}
+
+.event {
+    padding: 0 50px 50px 50px;
+    text-align: left
+}
+
+.count {
+    display: flex;
+    list-style: none;
+    background-color: #fff;
+    justify-content: space-between;
+}
+
+.count li {
+    margin: auto;
+    padding: 0 20px 50px 20px;
+}
+
+.insta {
+    display: flex;
+    flex-direction: column;
+}
+
+.firs {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.secon {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.insta img {
+    width: 100%;
+    height: 100%;
+}
+
+.imgn {
+    width: 33%;
+    height: 150px;
+}
+
+.last {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    background-color: #fff;
+}
+
+.in {
+    display: none;
+}
+
+@media (min-width:768px) {
+    .wrapper {
+        min-width: 768px;
+    }
+
+    .banner {
+        min-width: 768px;
+    }
+
+    .pic {
+        min-width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .vid {
+        min-width: 50%;
+    }
+
+    .album {
+        flex-direction: row;
+        max-width: 960px;
+        display: flex;
+    }
+
+    .vid,
+    .disc,
+    .pic {
+        width: 50%;
+    }
+
+    .mainEvent {
+        flex-direction: row;
+    }
+
+    .event,
+    .count {
+        width: 50%;
+    }
+
+    .zero {
+        padding: 50px 75px 50px 75px;
+    }
+
+    .insta {
+        flex-direction: row;
+        position: relative;
+    }
+
+    .firs,
+    .secon {
+        width: 50%;
+    }
+
+    .banner h2 {
+        font-size: 100px;
+    }
+
+    .disc {
+        font-size: 25px;
+    }
+
+    .disc h2 {
+        font-size: 30px;
+    }
+
+    .mainEvent {
+        font-size: 20px;
+    }
+
+    .in {
+        position: absolute;
+        max-width: 250px;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+        display: block;
+    }
+}
+
+@media (min-width: 1200px) {
+    .wrapper {
+        min-width: 1200px;
+    }
+
+    .banner {
+        min-width: 1200px;
+    }
+
+    .pic {
+        min-width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .vid {
+        min-width: 50%;
+    }
+
+    .album {
+        flex-direction: row;
+        max-width: 1200px;
+        display: flex;
+    }
+
+    .vid,
+    .disc,
+    .pic {
+        width: 50%;
+    }
+
+    .mainEvent {
+        flex-direction: row;
+    }
+
+    .event,
+    .count {
+        width: 50%;
+    }
+
+    .insta {
+        flex-direction: row;
+        position: relative;
+    }
+
+    .firs,
+    .secon {
+        width: 50%;
+    }
+
+    .banner h2 {
+        font-size: 150px;
+    }
+
+    .zero {
+        padding: 50px 75px 50px 75px;
+    }
+
+    .disc {
+        font-size: 25px;
+    }
+
+    .disc h2 {
+        font-size: 40px;
+    }
+
+    .mainEvent {
+        font-size: 30px;
+    }
+
+}
