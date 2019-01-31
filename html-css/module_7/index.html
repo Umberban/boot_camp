@@ -75,15 +75,16 @@
                 <form action="#" method="post">
                     <div class="formMain">
                         <div class="forl">
-                            <input class="validation" type="name" name="name" placeholder="YOUR NAME*">
-                            <input class="validation" type="email" name="email" placeholder="YOUR EMAIL*">
+                            <input class="validation" type="name" name="name" placeholder="YOUR NAME*" required>
+                            <input class="validation" type="email" name="email" placeholder="YOUR EMAIL*" required>
                             <input  type="text" name="subject" placeholder="SUBJECT">
                         </div>
                         <div class="forr">
-                            <input class="validation" type="textarea" name="message" placeholder="YOUR MESSAGE*">
-                        </div>
+                            <textarea class="validation" type="textarea" name="message" placeholder="YOUR MESSAGE*" required></textarea>
+                                
+                            </div>
                     </div>
-                    <input class="submit" type="submit" value="SEND MESSAGE">
+                    <input class="submit" type="submit" value="SEND MESSAGE" required>
                 </form>
             </div>
             <img src="./img/map.png" alt="" class="map">

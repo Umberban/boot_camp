@@ -172,7 +172,7 @@ width: 450px;
 height: 51px;
 }
 
-.forr input {
+.forr textarea {
     width: 450px;
     display: block;
     height: 210px;
@@ -195,9 +195,10 @@ height: 51px;
     
 }
 
-.validation:valid:not(:focus):not(:placeholder-shown) {
-    outline: 3px solid #00ff00;
-}
-.validation:invalid:not(:focus):not(:placeholder-shown) {
+.validation:invalid {
     outline: 3px solid #ff0000;
+}
+
+.validation:valid {
+    outline: 3px solid #00ff00;
 }
