@@ -195,11 +195,9 @@ height: 51px;
     
 }
 
-/* input:invalid {
-    background: #ec3838aa;
-  }
-
-
-  input:valid {
-    background:#47e247b6;
-  } */
+.validation:valid:not(:focus):not(:placeholder-shown) {
+    outline: 3px solid #00ff00;
+}
+.validation:invalid:not(:focus):not(:placeholder-shown) {
+    outline: 3px solid #ff0000;
+}
