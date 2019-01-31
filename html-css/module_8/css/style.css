@@ -11,7 +11,7 @@
 }
 
 header {
-    background-image: linear-gradient(to bottom, #d9660890, #e0e40e32), url(../img/1.2.png);
+    background-image: linear-gradient(to bottom, #d9660890, #e0e40e32), url(../img/1.png);
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -133,6 +133,9 @@ a {
 }
 
 @media (min-width: 768px) {
+    header {
+    background-image: linear-gradient(to bottom, #d9660890, #e0e40e32), url(../img/1.2.png);
+    }
 
     .wrapper {
         min-width: 768px;
