@@ -159,6 +159,8 @@ footer {
 .formMain {
     display: flex;
     justify-content: space-between;
+    position: relative;
+    z-index: 9999;
 }
 
 .forl {
@@ -191,7 +193,8 @@ height: 51px;
 .map {
     position: absolute;
     left: 670px;
-    top: 163px
+    top: 163px;
+    z-index: 1;
     
 }
 
