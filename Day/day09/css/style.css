@@ -1,0 +1,172 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Signika', sans-serif;;
+}
+
+.main {
+    background-color: #ada6a0;
+    padding: 44px;
+    font-family: 'Dancing Script', cursive; 
+}
+
+.wrapper {
+    max-width: 928px;
+    margin: auto;
+    text-align: center;
+}
+
+.logo {
+    font-size: 50px;
+    color: #b6b4b2;
+    font-weight: 700;
+    margin-bottom: 50px;
+    font-family: 'Dancing Script', cursive;;
+}
+
+.logo1 {
+    padding: 30px;
+    background-image: radial-gradient(circle at center, #ffffff, #ada6a0 );
+}
+
+.menu {
+    display: flex;
+    background-color: #fff;
+    border: solid 1px gray;
+    padding: 0 466px 0 48px;
+    list-style: none;
+    margin-bottom: 15px;
+    position: fixed;
+    max-width: 928px;
+    top: 135px;
+}
+
+.menu a:focus {
+    color: red;
+}
+
+.menu a {
+    text-decoration: none;
+    margin-right: 71px;
+    font-size: 18px;
+    color:#5b5b5b;
+}
+
+.photo {
+    background-image: url(../img/1.png);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: #fff 15px solid;
+    height: 347px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 26px 0 26px;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.news {
+    max-width: 928px;
+    margin: auto;
+    margin-bottom: 16px;
+}
+
+.new{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.new li {
+    background-color: #fff;
+    padding: 12px;
+    max-width: 225px;
+    border: 1px solid gray;
+}
+
+.pic {
+    width: 100%;
+    margin-bottom: 21px;
+}
+
+.new p {
+    font-size: 12px;
+    margin-bottom: 30px;
+}
+
+.new a {
+    text-align: right;
+    color: #000000;
+    font-size: 12px;
+    margin-left: auto;
+    display: block;
+}
+
+.info {
+    display: flex;
+    background-color: #fff;
+    border: solid 1px gray;
+    max-width: 928px;
+    padding: 11px;
+    margin: auto;
+    margin-bottom: 15px;
+}
+
+.galery {
+    max-width: 216px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-right: 16px;
+}
+
+.galery img {
+width: 105px;
+height: 79px;
+}
+
+.text {
+    max-width: 673px;
+}
+
+.text h2{
+    font-size: 12px;
+    margin-bottom: 18px;
+font-weight: 700;
+}
+
+.text p {
+    font-size: 12px;
+    margin-bottom: 34px
+}
+
+.text a {   
+    text-align: right;
+    color: #000000;
+    font-size: 12px;
+    margin-left: auto;
+    display: block;
+}
+
+footer {
+    display: flex;
+    background-color: #fff;
+    border: solid 1px gray;
+    max-width: 928px;
+    padding: 20px 200px 20px 20px;
+    margin: auto;
+}
+
+.end {
+    display: flex;
+    list-style: none;
+}
+
+.end a {
+    text-decoration: none;
+    font-size: 14px;
+    color:#5b5b5b;
+    margin-right: 20px;
+}
