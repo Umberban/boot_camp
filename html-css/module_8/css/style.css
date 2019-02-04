@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+
+html {
+    font-size: 16px;
+}
+
 .wrapper {
     /* max-width: 480px; */
     margin: auto;
