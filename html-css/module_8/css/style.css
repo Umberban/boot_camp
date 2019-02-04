@@ -34,8 +34,6 @@ header {
 
 .sign li {
     list-style: none;
-
-
 }
 
 h1 {
@@ -190,6 +188,7 @@ a {
         display: flex;
         justify-content: space-around;
     }
+    
     .port {
         width: 25%
     }

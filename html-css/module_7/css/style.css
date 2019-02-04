@@ -54,7 +54,7 @@ header {
 .menu a {
     text-decoration: none;
     color: #222222;
-    font-family: 'Abz';
+    font-family: 'Abz' sans-serif;
 }
 
 .menu1 a:hover {
@@ -98,7 +98,7 @@ header {
     color: #777777;
     font-size: 16px;
     margin-bottom: 80px;
-    font-family: 'hhh';
+    font-family: 'hhh' sans-serif;
 }
 
 .services {
@@ -126,7 +126,7 @@ header {
 .photo h3 {
     font-size: 18px;
     margin-bottom: 15px;
-    font-family: 'abz';
+    font-family: 'abz' sans-serif;
 }
 
 .photo p {
@@ -153,7 +153,7 @@ footer {
     color: #777777;
     font-size: 16px;
     margin-bottom: 80px;
-    font-family: 'hhh';
+    font-family: 'hhh' sans-serif;
 }
 
 .formMain {

@@ -1,0 +1,99 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.green {
+    background-color: #43ba7b;
+    padding: 15px;
+}
+
+.wrapper {
+    margin: auto;
+    text-align: center;
+}
+
+.objects {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 30px;
+    color: #ffffff;
+}
+
+.pic {
+    margin-bottom: 20px;
+}
+
+.objects h2 {
+    margin-bottom: 20px;
+}
+
+.john {
+    padding: 25px;
+}
+
+.doe p {
+    margin-bottom: 20px;
+}
+
+.app {
+    margin-bottom: 20px;
+}
+
+.arrow {
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+    margin: auto;
+}
+
+.mail {
+    background-color: #42bf7c;
+    padding: 20px;
+}
+
+.mail p {
+    color: #ffffff;
+    margin-bottom: 25px;
+}
+
+input {
+    width: 290px;
+    height: 50px;
+    text-indent: 20px;
+}
+
+input::placeholder {
+    color: #42be7c;
+    font-size: 14px;
+}
+
+footer {
+    padding: 20px;
+}
+
+.soc {
+    margin-bottom: 20px;
+}
+
+
+@media (min-width:760px) {
+    .menu {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .objects {
+        width: 40%;
+    }
+}
+
+
+@media (min-width:1200px) {
+    .objects {
+        width: 30%;
+    }
+}
