@@ -298,6 +298,14 @@ h1 a {
         flex-direction: row-reverse;
     }
 
+    h1 a {
+        font-size: 30px;
+    }
+
+    .sign a {
+        font-size: 12px;
+    }
+
     .sign {
         width: 40%;
     }
@@ -357,6 +365,19 @@ h1 a {
     margin-bottom: 40px;
 }
 
+.story h2 {
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.story h3 {
+    font-size: 20px;
+}
+
+.story p {
+    font-size: 15px;
+}
+
     .pic2 {
         display: block;
         margin: 0;
@@ -378,6 +399,10 @@ h1 a {
     .objects {
         width: 30%;
         margin: auto;
+    }
+
+    .sign a {
+        font-size: 15px;
     }
 
     .combo {
