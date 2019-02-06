@@ -1,0 +1,208 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 12px;
+}
+
+.logo {
+    background-color: #b3b3b3;
+    padding: 20px;
+}
+
+.box1 {
+    align-items: center
+
+}
+
+.cent {
+    font-size: 12px;
+}
+
+.cent::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 100px;
+    background-color:#000000;
+    margin: 20px auto;
+}
+
+.mission {
+    text-align: center;
+    font-size: 35px;
+}
+
+.btn-outline-dark{
+    color: #ffffff
+}
+
+
+.box1 {
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+.box3 {
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.box4 {
+    padding-bottom: 70px;
+}
+
+.box5 {
+    padding: 20px 0;
+}
+.psd {
+    font-size: 13px;
+    color: #fff;
+}
+
+.download {
+    background-color: #000000;
+}
+
+.stars::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 100px;
+    background-color:#000000;
+    margin: 20px 0;
+}
+
+.download1 {
+    background-color: #fff;
+    color: #000000;
+    font-size: 14px;
+    border-radius: 25%;
+   padding: 5px;
+}
+
+.portfolio {
+    color: #000000;
+    border: solid 1px #000000;
+    line-height: 50px;
+    padding: 10px;
+    font-size: 15px;
+}
+
+.back {
+    background-color: #b3b3b3;
+}
+
+.play {
+    background-color: #000;
+}
+
+
+.video {
+    color: #fff;
+    font-size: 15px;
+    /* padding: 200px 0; */
+    margin-bottom: 50px;
+    display: block;
+}
+
+.pad {
+    padding: 100px;
+}
+
+.box6 {
+    margin-bottom: 50px;
+}
+
+.porto {
+    padding: 30px 0;
+}
+
+.pusk {
+    margin: auto;
+    text-align: center;
+}
+
+.line::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 100px;
+    background-color:#000000;
+    margin: 20px auto;
+}
+
+.box7 {
+    text-align: center;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+.txt {
+    text-align: center;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+}
+
+.menu a {
+    border: solid #000 1px;
+    padding: 10px;
+    color: #000;
+}
+
+.box8 {
+    margin-bottom: 20px;
+}
+
+.box9 {
+    margin-bottom: 20px;
+}
+
+.box10 {
+    margin-bottom: 20px;
+}
+
+.back2 {
+    display: flex;
+    background-color: #b3b3b3;
+    height: 200px;
+    justify-content: space-between;
+}
+
+.box11 {
+    margin-bottom: 20px;
+}
+.box12 {
+    margin-bottom: 30px;
+}
+
+.box13 {
+    margin: auto;
+    text-align: center;
+}
+
+.box14 {
+    text-align: center;
+    color:#fff;
+}
+
+.palochki {
+    padding: 30px;
+}
+
+.discr {
+    padding: 50px;
+    font-size: 30px;
+}
+
+.sing {
+    font-size: 10px;
+    padding: 30px;
+}
