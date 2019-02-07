@@ -1,0 +1,172 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    text-align: center;
+}
+
+.hello {
+    background-image: linear-gradient(to bottom, #d9660890, #e0e40e32), url(../img/1.png);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    padding: 20px;
+}
+
+.sign {
+    /* margin: auto; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.sign li {
+    list-style: none;
+}
+
+h1 a {
+    text-align: center;
+    font-size: 20px;
+    color: #ffffff;
+}
+
+h1 {
+    margin: auto;
+    text-align: center;
+    padding-top: 30px
+}
+
+.sign a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.bord {
+    border: #ffffff solid 2px;
+    border-radius: 115px;
+    line-height: 36px;
+    margin-left: 35px;
+    display: block;
+    padding: 0 10px;
+}
+
+.share h2 {
+    font-size: 45px;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.size p {
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.find a {
+   color: #ffffff;
+    background-color: #f52a2a;
+    border-radius: 115px;
+    font-size: 14px;
+    display: block;
+    margin: auto;
+    text-align: center;
+    padding: 10px;
+}
+
+.holi {
+    font-size: 30px;
+}
+
+.portfolio img {
+    border-radius: 50%;
+    display: block;
+    margin: auto;
+}
+
+
+.obj {
+    position: relative;
+    bottom: 30px;
+    left: 40px;
+    border: solid 2px #ffffff;
+}
+
+.port {
+    text-align: center;
+}
+
+.port h3 {
+    font-size: 14px;
+    /* margin-bottom: 16px */
+    text-align: center;
+}
+
+.port p {
+    font-size: 14px;
+    /* margin-bottom: 28px; */
+    /* max-width: 210px; */
+    text-align: center;
+}
+
+.find1 a {
+    color: #f52a2a;
+    border: #f52a2a solid 2px;
+    border-radius: 115px;
+    font-size: 14px;
+    display: block;
+    margin: auto;
+    padding: 10px;
+}
+
+
+
+@media (min-width: 768px) {
+    .hello {
+    background-image: linear-gradient(to bottom, #d9660890, #e0e40e32), url(../img/1.2.png);
+    }
+
+    .box-flex1 {
+        display: flex;
+    }
+
+    h1 {
+        margin: auto;
+        text-align: center;
+        padding-top: 0;
+    }
+
+    .box1 {
+        align-items: center;
+        padding-bottom: 50px;
+    }
+}
+
+@media (min-width: 992px) {
+
+    .box-flex1 {
+        display: flex;
+    }
+
+    .box-flex2 {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    h1 {
+        margin: auto;
+        text-align: center;
+        padding-top: 0;
+    }
+
+    .box1 {
+        align-items: center;
+    }
+}
+
+
