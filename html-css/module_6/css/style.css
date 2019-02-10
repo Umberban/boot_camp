@@ -181,7 +181,7 @@ header {
     background-color: #31c8ad;
 }
 
-.social a:hover img {
+.social a:hover {
     transform: rotate(360deg);
     transition: all 1.5s ease;
 }
