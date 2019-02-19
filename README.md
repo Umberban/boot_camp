@@ -7,3 +7,7 @@
 [Module 8 Code](https://github.com/Umberban/boot_camp/tree/master/html-css/module_8);
 [Maket gold](https://umberban.github.io/boot_camp/Day/day11/maket);
 [Maket gold code](https://github.com/Umberban/boot_camp/tree/master/Day/day11/maket);
+JAVA SCRIPT
+
+[Module 1](https://umberban.github.io/boot_camp/JavaScript/module_1/module_1);
+[module 1 code](https://github.com/Umberban/boot_camp/tree/master/JavaScript/module_1/module_1);
