@@ -11,3 +11,5 @@ JAVA SCRIPT
 
 [Module 1](https://umberban.github.io/boot_camp/JavaScript/module_1/module_1);
 [module 1 code](https://github.com/Umberban/boot_camp/tree/master/JavaScript/module_1/module_1);
+
+[Module 2](https://umberban.github.io/boot_camp/JavaScript/module_2/module_2) 
