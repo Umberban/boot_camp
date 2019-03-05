@@ -26,3 +26,8 @@ JAVA SCRIPT
 
 [Module 5](https://umberban.github.io/boot_camp/JavaScript/module_5)
 [Module 5 Code](https://github.com/Umberban/boot_camp/tree/master/JavaScript/module_5)
+
+
+
+[Module 6](https://umberban.github.io/boot_camp/JavaScript/module_6);
+[Module 6 code](https://github.com/Umberban/boot_camp/tree/master/JavaScript/module_6)
