@@ -6,32 +6,76 @@ const galleryItems = [
   { preview: './Img/SixSmall.jpg', fullview: './Img/SixLarge.jpg', alt: "alt text 5" },
 ];
 
-const box = document.querySelector('.js-image-gallery');
+// const box = document.querySelector('.js-image-gallery');
 
-window.addEventListener("DOMContentLoaded", function(){
-  const full = document.createElement('div');
+// window.addEventListener("DOMContentLoaded", hello);
+
+
+
+// function hello(){
+//   const full = document.createElement('div');
+//   full.classList.add('fullview');
+//   let fullImg = `<img class='big' style= 'width:100%' src=${galleryItems[0].preview} data-fullview = ${galleryItems[0].fullview} alt=${galleryItems[0].alt}>`;
+//   full.innerHTML= fullImg;
+//   box.appendChild(full);
+//   full.style.textAlign ="center";
+// const preview = document.createElement('ul');
+// preview.classList.add('preview');
+// preview.style.display = 'flex';
+// preview.style.listStyle = 'none';
+// box.style.width = "700px";
+// box.style.margin = "auto";
+
+
+
+
+// let previewList = galleryItems.reduce((acc,i) => acc + `<li><img style= 'width:100% height = 100px 'src=${i.preview} data-fullview = ${i.fullview} alt=${i.alt}> </li>`,"");
+// preview.innerHTML= previewList;
+// box.appendChild(preview);
+// const bigImg = document.querySelector('.big');
+
+// box.addEventListener('click', function(e){
+//   if(e.target.nodeName !== "IMG") return;
+//   bigImg.src = e.target.dataset.fullview;
+// });
+// }
+
+
+class Gallery{
+  constructor(items, parentNode, defaultActiveItem){
+  this.items = items,
+  this.parentNode = parentNode,
+  this.defaultActiveItem = defaultActiveItem;
+  }
+
+ get createNewGallery(){
+  let full = document.createElement('div');
   full.classList.add('fullview');
-  let fullImg = `<img class='big' style= 'width:100%' src=${galleryItems[0].preview} data-fullview = ${galleryItems[0].fullview} alt=${galleryItems[0].alt}>`;
+  let fullImg = `<img class='big' style= 'width:100%' src=${this.items[this.defaultActiveItem].fullview} >`;
   full.innerHTML= fullImg;
-  box.appendChild(full);
-  full.style.textAlign ="center";
-const preview = document.createElement('ul');
-preview.classList.add('preview');
-preview.style.display = 'flex';
-preview.style.listStyle = 'none';
-box.style.width = "700px";
-box.style.margin = "auto";
+  this.parentNode.appendChild(full);
+ 
+    let preview = document.createElement('ul');
+    preview.classList.add('preview');
+    let addImage = this.items.reduce((acc ,i) => acc + `<li><img style= 'width:100% height = 100px 'src=${i.preview} data-fullview = ${i.fullview} alt=${i.alt}> </li>`,"" );
+    preview.innerHTML= addImage;
+    this.parentNode.appendChild(preview);
+  }
+  get clicker(){
+  this.parentNode.addEventListener('click', function(e){
+      const bigImg = document.querySelector('.big');
+      if(e.target.nodeName !== "IMG") return;
+      bigImg.src = e.target.dataset.fullview;
+    });
+    }
+  }
 
 
+const gallery = new Gallery(
+  galleryItems,
+  document.querySelector('.image-gallery'),
+  1
+);
 
-
-let previewList = galleryItems.reduce((acc,i) => acc + `<li><img style= 'width:100% height = 100px 'src=${i.preview} data-fullview = ${i.fullview} alt=${i.alt}> </li>`,"");
-preview.innerHTML= previewList;
-box.appendChild(preview);
-const bigImg = document.querySelector('.big');
-
-box.addEventListener('click', function(e){
-  if(e.target.nodeName !== "IMG") return;
-  bigImg.src = e.target.dataset.fullview;
-});
-});
+gallery.createNewGallery;
+gallery.clicker;
