@@ -47,5 +47,7 @@ JAVA SCRIPT
 [Module 8](https://umberban.github.io/boot_camp/JavaScript/module_8);
 [Module 8 code](https://github.com/Umberban/boot_camp/tree/master/JavaScript/module_8);
 
+[Module 9](https://umberban.github.io/boot_camp/JavaScript/module_9);
+[Module 9 code](https://github.com/Umberban/boot_camp/tree/master/JavaScript/module_9);
 
 
