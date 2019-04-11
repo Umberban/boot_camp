@@ -409,7 +409,7 @@
     5 - "Каталог лучших отелей"
 */
 
-// const stars = Number.isInteger(Number(prompt('Введите число от 1 до 5')));
+// const stars = Number(prompt('Введите число от 1 до 5'));
 
 // switch (stars) {
 //     case 1:
@@ -702,7 +702,7 @@
 // }
 //  Дана строка с цифрами, например, '12345'. Проверьте, что первым символом этой строки является цифра 1, 2 или 3. Если это так - выведите 'да', в противном случае выведите 'нет'.
 // let str = '12345';
-// if (parseInt(str[0])=== 1 || parseInt(str[0])=== 2 || parseInt(str[0])=== 3 ){
+// if (parseInt(str[0]) === 1 || parseInt(str[0]) === 2 || parseInt(str[0]) === 3 ){
 //     console.log("Yes");
 // }else{
 //     console.log('No');
@@ -733,22 +733,22 @@
 20 лет	выше	25%
 Учтите вариант ошибки – пользователь вводит отрицательное число.*/
 
-// const exp = Number.isInteger(prompt("Enter your experience in years"));
-// let bonus;
-// if(exp >= 0 && exp){
-//   if (exp <= 3){
-//     bonus= "0%";
-//     alert(`Your bonuses for ${exp} years experience is ${bonus}`);
-//   } else if (exp > 3 && exp <= 10) {
-//     bonus = "10%";
-//     alert(`Your bonuses for ${exp} years experience is ${bonus}`);
-//   }else if (exp > 10 && exp <= 20) {
-//     bonus = "20%";
-//     alert(`Your bonuses for ${exp} years experience is ${bonus}`);
-//   }else {
-//     bonus = "25%";
-//     alert(`Your bonuses for ${exp} years experience is ${bonus}`);
-//   }
-// }else{
-//   alert('You should enter a number');
-// }
+const exp = Number.parseInt(prompt("Enter your experience in years"));
+let bonus;
+if(exp >= 0 && exp){
+  if (exp <= 3){
+    bonus= "0%";
+    alert(`Your bonuses for ${exp} years experience is ${bonus}`);
+  } else if (exp > 3 && exp <= 10) {
+    bonus = "10%";
+    alert(`Your bonuses for ${exp} years experience is ${bonus}`);
+  }else if (exp > 10 && exp <= 20) {
+    bonus = "20%";
+    alert(`Your bonuses for ${exp} years experience is ${bonus}`);
+  }else {
+    bonus = "25%";
+    alert(`Your bonuses for ${exp} years experience is ${bonus}`);
+  }
+}else{
+  alert('You should enter a number');
+}

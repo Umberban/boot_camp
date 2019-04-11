@@ -1,18 +1,15 @@
-const user = {
-    name: "Mango",
-    age: 20,
-    hobby: "html",
-    premium: true
+unction User ({name, age, friends}){
+  this.name = name;
+  this.age = age;
+  this.friends = friends;
+  this.getInfo = function () {
+    console.log(` User ${this.name} is ${this.age} years old and has ${friends} friends`);
   };
-
-  user.mood = "happy";
-  user.hobby = "javascript";
-  user.premium = false;
-
-for(let i of Object.keys(user)){
-    console.log(`${i} : ${user[i]}`)
 }
 
-for(let i of Object.entries(user)){
-    console.log(`${i[0]} : ${i[1]}`);
-}
+
+const mango = new User({ name: "Mango", age: 2, friends: 20 });
+mango.getInfo(); // User Mango is 2 years old and has 20 friends
+
+const poly = new User({ name: "Poly", age: 3, friends: 17 });
+poly.getInfo(); // User Poly is 3 years o

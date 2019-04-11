@@ -1,13 +1,12 @@
 const filterFromArray = function(mas, ...num) {
-let arr = mas.slice();
-    for(let i of num){
-        if(arr.includes(i)){
-        arr.splice(arr.indexOf(i),1);
+let arr = [];
+    for(let i of mas){
+        if(!num.includes(i)){
+        arr.push(i);
         }
     }
   return arr;
 }; 
-
 // Вызовы функции для проверки
 console.log(
   filterFromArray([1, 2, 3, 4, 5], 2, 4)

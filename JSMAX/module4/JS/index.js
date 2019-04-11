@@ -332,3 +332,260 @@
 //   account.addOrder(5000, "order-4");
 //   console.log(account.balance); // 19000
 //   console.log(account.orders); // ['order-1', 'order-2', 'order-3', 'order-4']
+
+// function SHOP(seller, sell,plan){
+//   this.seller = seller;
+//   this.sells = sell;
+//   this.plan = plan;
+//   this.deals = function(product){ 
+//     this.sells ++;
+//     this.plan -- ;
+//     return `${this.seller} has commited ${this.sells} deals by selling the ${product}. She must commit ${this.plan} deals `;
+//   };
+// }
+
+// let candyShop = new SHOP("Duniya", 0 , 10);
+
+// console.log(candyShop.deals("Caramel"));
+// console.log(candyShop.deals("Loli-Pop"));
+// console.log(candyShop.deals("Chocolate"));
+// console.log(candyShop.deals("Cake"));
+// console.log(candyShop.deals("Bubble gum"));
+
+
+
+//====================== task16 ==================
+/*  
+  Напиши функцию-конструкор User для создания 
+  пользователя со следующим свойствами:
+    - name - строка (имя)
+    - age - число (возраст)
+    - friends - число (кол-во друзей)
+
+  Имя, активность, возраст и друзей, 
+  будут переданы при вызове конструктора User.
+  
+  Добавь метод getInfo(), который, выводит строку:
+  `User ${имя} is ${возраст} years old and has ${кол-во друщзей} friends`
+*/
+
+// function User ({name, age, friends}){
+//   this.name = name;
+//   this.age = age;
+//   this.friends = friends;
+//   this.getInfo = function () {
+//     console.log(` User ${this.name} is ${this.age} years old and has ${friends} friends`);
+//   };
+// }
+
+
+// const mango = new User({ name: "Mango", age: 2, friends: 20 });
+// mango.getInfo(); // User Mango is 2 years old and has 20 friends
+
+// const poly = new User({ name: "Poly", age: 3, friends: 17 });
+// poly.getInfo(); // User Poly is 3 years old and has 17 friends
+
+
+//====================== task17 ==================
+
+/*  
+ * Расставь отсутствующие this в конструкторе Account
+*/
+
+// function Account(login, password, type = "regular") {
+//     this.login = login;
+//     this.password = password;
+//     this.type = type;
+  
+//     this.changePassword = function(newPassword) {
+//       this.password = newPassword;
+//     };
+  
+//     this.getInfo = function() {
+//       console.log(`
+//         Login: ${this.login}, 
+//         Pass: ${this.password}, 
+//         Type: ${this.type}
+//       `);
+//     };
+//   }
+  
+//   const account = new Account("Mango", "qwe123", "premium");
+  
+//   console.log(account.login); // 'Mango'
+//   console.log(account.password); // 'qwe123'
+//   console.log(account.type); // 'premium'
+  
+//   account.changePassword("asdzxc");
+//   console.log(account.password); // 'asdzxc'
+  
+//   account.getInfo(); // Login: 'Mango', Pass: 'asdzxc', Type: 'premium'
+  
+
+//====================== task18 ==================
+
+/*  
+ * Напиши конструктор Storage(items), который будет создавать объекты для управления складом товаров
+ * При вызове будет получать один аргумент - начальный массив товаров, и записываеть его в свойство items
+ *
+ * Добавь метод getItems, который возвращает массив текущих товаров
+ * Добавь метод addItem(item), который получает новый товар и добавляет его к текущим
+ * Добавь метод removeItem(item), который получет товар и, если он есть, удаляет его из текущих
+*/
+
+// function Storage(items){
+//   this.items = items;
+//   this.getItems = function(){
+//     return this.items;
+//   }
+//   this.addItem = function(str){
+//     return this.items.push(str);
+//   };
+//   this.removeItem = function (str){
+//     return this.items.splice(this.items.indexOf(str),1);
+//   };
+// }
+
+
+// const storage = new Storage([
+//     "Нанитоиды",
+//     "Пролонгер",
+//     "Железные жупи",
+//     "Антигравитатор"
+//   ]);
+  
+//   const items = storage.getItems();
+//   console.log(items); // [ "Нанитоиды", "Пролонгер", "Железные жупи", "Антигравитатор" ]
+  
+//   storage.addItem("Дроид");
+//   console.log(storage.items); // [ "Нанитоиды", "Пролонгер", "Железные жупи", "Антигравитатор", "Дроид" ]
+  
+//   storage.removeItem("Пролонгер");
+//   console.log(storage.items); // [ "Нанитоиды", "Железные жупи", "Антигравитатор", "Дроид" ]
+
+/*
+  Создайте скрипт кассира, который получает список продуктов и деньги, 
+  подсчитывает общую стоимость продуктов, и в зависимости от того хватает 
+  денег или нет, уведомляет покупателя о результате.
+*/
+
+/* Есть база данных товаров, в формате "имя-товара":"цена за одну единицу" */ 
+
+const products = {
+  bread: 10,
+  milk: 15,
+  apples: 20,
+  chicken: 50,
+  cheese: 40,
+};
+/* 
+Необходимо создать функцию-конструктор Cashier.
+  
+  Поля будущего объекта кассира (🔔 объявляются как this.имя_поля в конструкторе): 
+    - name - строка, имя кассира, передается при вызове конструктора
+    
+    - productDatabase - объект база данных продуктов, передается при вызове конструктора
+    
+    - customerMoney - число, сумма введенная пользователем при запросе денег, всегда начинается с 0 
+    
+    - setCustomerMoney(value) - метод, получает число, деньги покупателя, и записывает его в поле customerMoney.
+    
+    - countTotalPrice(order) - метод, получает объект списока покупок, считает общую стоимость покупок.
+      🔔 Ключи объекта order есть в объекте productDatabase. Из order берем количество единиц продукта,
+         а из productDatbase цену за одну штуку и умножаем, так получаем цену одного типа продукта в заказе.
+         Чтобы посчитать цену для всех продуктов заказа используйте цикл, перебрав все ключи order.
+     
+    - countChange(totalPrice) - метод, считает сдачу, разницу между общей суммой покупок и деньгами покупателя.
+        * Обязательно проверьте что customerMoney не меньше чем значение totalPrice
+        * Если денег было передано достаточно, возвращает разницу денег.
+        * Если в customerMoney меньше денег чем в totalPrice, возвращает null 
+        
+    - onSuccess(change) - метод, выводит в консоль строку `Спасибо за покупку, ваша сдача ${change}!`.
+    
+    - onError() - метод, выводит в консоль строку 'Очень жаль, вам не хватает денег на покупки'   
+    
+    - reset() - метод, сбрасывает поле customerMoney 0.
+*/
+
+function Cashier(name, productDatabase) {
+  this.name = name;
+  this.productDatabase = productDatabase;
+  this.customerMoney = 0;
+
+  this.setCustomerMoney = (value) => this.customerMoney = value;
+
+  this.countTotalPrice = function (order) {
+      let show;
+      let sum = 0;
+      for (let key in order) {
+          show = order[key] * productDatabase[key];
+          sum += show;
+      }
+      return sum;
+  };
+
+  this.countChange = function(totalPrice){
+     if (this.customerMoney < totalPrice) {
+      return null;
+     } else {
+         let change = this.customerMoney - totalPrice;
+      return change;
+     }
+     
+  }
+  this.onSuccess = (change) => console.log(`Спасибо за покупку, ваша сдача ${change}!`);
+  this.onError = () => console.log('Очень жаль, вам не хватает денег на покупки');
+  this.reset = () => this.customerMoney = 0;
+}
+
+/* Заказ пользователя хранится в виде объекта следующего формата. "имя-продукта":"количество-единиц" */
+const order = {
+  bread: 2,
+  milk: 2,
+  apples: 1,
+  cheese: 1
+};
+
+/* Пример использования */
+const mango = new Cashier('Mango', products);
+// Проверяем исходные значения полей
+console.log(mango.name); // Mango
+console.log(mango.productDatabase); // ссылка на базу данных продуктов (объект products)
+console.log(mango.customerMoney); // 0
+
+// Вызываем метод countTotalPrice для подсчета общей суммы
+// передавая order - список покупок пользователя
+const totalPrice = mango.countTotalPrice(order);
+
+// Проверям что посчитали
+console.log(totalPrice); // 110
+
+// Вызываем setCustomerMoney для запроса денег покупателя
+mango.setCustomerMoney(300);
+
+// Проверяем что в поле с деньгами пользователя
+console.log(mango.customerMoney); // 300
+
+// Вызываем countChange для подсчета сдачи
+const change = mango.countChange(totalPrice);
+
+// Проверяем что нам вернул countChange
+console.log(change); // 190
+
+// Проверяем результат подсчета денег
+if(change !== null) {
+   // При успешном обслуживании вызываем метод onSuccess
+  mango.onSuccess(change); // Спасибо за покупку, ваша сдача 190
+} else {
+  // При неудачном обслуживании вызываем метод onError   
+  mango.onError(); // Очень жаль, вам не хватает денег на покупки
+}
+
+// Вызываем reset при любом исходе обслуживания
+mango.reset();
+
+// Проверяем значения после reset
+console.log(mango.customerMoney); // 0
+
+
+

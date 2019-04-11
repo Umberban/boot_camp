@@ -28,7 +28,7 @@ function Cashier(name, productDatabase, ) {
             show = order[key] * productDatabase[key];
             sum = sum += show
         }
-        return sum
+        return sum;
     }
     this.countChange = function(totalPrice){
        if (this.customerMoney < totalPrice) {
