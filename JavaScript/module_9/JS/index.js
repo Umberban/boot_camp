@@ -36,9 +36,9 @@ class Stopwatch {
     this.btnStart.classList.add("btn");
     this.btnLoop.classList.add("js-take-lap");
     this.btnLoop.classList.add("btn");
-    this.btnLoop.setAttribute("disabled", "disabled");
+    this.btnLoop.setAttribute("disabled", true);
     this.btnStop.classList.add("js-reset");
-    this.btnStop.setAttribute("disabled", "disabled");
+    this.btnStop.setAttribute("disabled", true);
     this.btnStop.classList.add("btn");
     this.time.textContent = "00:00:0";
     this.smTime.textContent = "000";
@@ -58,8 +58,8 @@ class Stopwatch {
       this.isActive = true;
       this.timerId = setInterval(this.calculateTime, 100);
       this.btnStart.textContent = "pause";
-      this.btnStop.removeAttribute("disabled", "disabled");
-      this.btnLoop.removeAttribute("disabled", "disabled");
+      this.btnStop.removeAttribute("disabled", true);
+      this.btnLoop.removeAttribute("disabled", true);
     } else if (this.isActive === false && this.startTime !== isNaN) {
       this.startTime = Date.now() - this.deltaTime; 
       this.isActive = true;
@@ -125,3 +125,4 @@ class Stopwatch {
 
 let sw1 = new Stopwatch(parentA);
 // let sw2 = new Stopwatch(parentB);
+ 

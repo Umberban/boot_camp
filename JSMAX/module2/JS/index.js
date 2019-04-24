@@ -611,21 +611,21 @@
       в массив чисел не нужно, после чего снова пользователю предлагается ввести число в prompt.
 */
 
-// let userInput;
+// let input;
 // const numbers = [];
 // let total = 0;
 
 // do{
-//     userInput = prompt("enter a number");
-//     if(userInput !== null && userInput !== 0 && Number(userInput) && userInput.length > 0){
-//     numbers.push(userInput);
-//     }else if (userInput === null){
+//     input = prompt("enter a number");
+//     if(input !== null && input !== 0 && Number(input) && input.length > 0){
+//     numbers.push(input);
+//     }else if (input === null){
 //     null;
 //     }else{
 //         alert('Было введено не число, попробуйте еще раз');
 //     }
 
-// }while (userInput !== null);
+// }while (input !== null);
 // for(let i of numbers){
 //     total += Number(i);
 // }
@@ -659,23 +659,23 @@
   Если пользователь нажмет Cancel, прекратить выполнение цикла.
 */
 
-// const passwords = ['qwerty', '111qwe', '123123', 'r4nd0mp4zzw0rd'];
-// let attempts = 3;
+const passwords = ['qwerty', '111qwe', '123123', 'r4nd0mp4zzw0rd'];
+let attempts = 3;
 
-// let inputPassword;
+let inputPassword;
 
-// do{
-//     inputPassword = prompt('Enter Password');
-//     if(passwords.includes(inputPassword)){
-//         alert("Wellcome");
-//         break;
-//     }else if (inputPassword !== null){
-//         attempts --;
-//         if(attempts > 0){
-//             alert(`Wrong pass , you have ${attempts} attempts`);
-//         }else{
-//             alert('ERROR You dont have any attempts');
-//         }
-//     }
-// }while(attempts > 0 && inputPassword !== null);
+do{
+    inputPassword = prompt('Enter Password');
+    if(passwords.includes(inputPassword)){
+        alert("Wellcome");
+        break;
+    }else if (inputPassword !== null){
+        attempts --;
+        if(attempts > 0){
+            alert(`Wrong pass , you have ${attempts} attempts`);
+        }else{
+            alert('ERROR You dont have any attempts');
+        }
+    }
+}while(attempts > 0 && inputPassword !== null);
 

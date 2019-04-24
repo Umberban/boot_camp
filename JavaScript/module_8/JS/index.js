@@ -1,10 +1,10 @@
-const galleryItems = [
-  { preview: './Img/FisrtSmall.jpg', fullview: './Img/FisrtLarge.jpg', alt: "alt text 1" },
-  { preview: './Img/SecondSmall.jpg', fullview: './Img/SecondLarge.jpg', alt: "alt text 2" },
-  { preview: './Img/ThirdSmall.jpg', fullview: './Img/ThirdLarge.jpg', alt: "alt text 3" },
-  { preview: './Img/FiveSmall.jpg', fullview: './Img/FiveLarge.jpg', alt: "alt text 4" },
-  { preview: './Img/SixSmall.jpg', fullview: './Img/SixLarge.jpg', alt: "alt text 5" },
-];
+// const galleryItems = [
+//   { preview: './Img/FisrtSmall.jpg', fullview: './Img/FisrtLarge.jpg', alt: "alt text 1" },
+//   { preview: './Img/SecondSmall.jpg', fullview: './Img/SecondLarge.jpg', alt: "alt text 2" },
+//   { preview: './Img/ThirdSmall.jpg', fullview: './Img/ThirdLarge.jpg', alt: "alt text 3" },
+//   { preview: './Img/FiveSmall.jpg', fullview: './Img/FiveLarge.jpg', alt: "alt text 4" },
+//   { preview: './Img/SixSmall.jpg', fullview: './Img/SixLarge.jpg', alt: "alt text 5" },
+// ];
 
 // const box = document.querySelector('.js-image-gallery');
 
@@ -74,8 +74,11 @@ class Gallery{
 const gallery = new Gallery(
   galleryItems,
   document.querySelector('.image-gallery'),
-  1
+  4
 );
 
 gallery.createNewGallery;
 gallery.clicker;
+
+
+
