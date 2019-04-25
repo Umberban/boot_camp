@@ -50,6 +50,9 @@ JAVA SCRIPT
 [Module 9](https://umberban.github.io/boot_camp/JavaScript/module_9);
 [Module 9 code](https://github.com/Umberban/boot_camp/tree/master/JavaScript/module_9);
 
+[Module 10](https://umberban.github.io/boot_camp/JavaScript/module_10);
+[Module 10 code](https://github.com/Umberban/boot_camp/tree/master/JavaScript/module_10);
+
 ==========================================JSMAX======================================================
 
 [Module 1](https://umberban.github.io/boot_camp/JSMAX/module1);
