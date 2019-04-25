@@ -21,178 +21,225 @@
   Сделать минимальный графический интерфейс в виде панели с полями и кнопками. 
   А так же панелью для вывода результатов операций с бэкендом.
 */
+const body = document.body;
+class Req {
+  constructor(){
+    this.form = document.createElement('form');
+    this.inputName = document.createElement('input');
+    this.inputAge = document.createElement('input');
+    this.btnGet = document.createElement('input');
+    this.btnGetId = document.createElement('input');
+    this.btnDelete = document.createElement('input');
+    this.btnAdd = document.createElement('input');
+    this.btnUpdate = document.createElement('input');
+    this.reset = document.createElement('button');
+    this.result = document.createElement('div');
+    this.createElement = this.createElement.bind(this);
+    this.getAllUsers = this.getAllUsers.bind(this);
+    this.createUsersList = this.createUsersList.bind(this);
+    this.getUserById = this.getUserById.bind(this);
+    this.showUserInfo = this.showUserInfo.bind(this);
+    this.addUser = this.addUser.bind(this);
+    this.successAdd = this.successAdd.bind(this);
+    this.removeUser = this.removeUser.bind(this);
+    this.successDelete = this.successDelete.bind(this);
+    this.updateUser = this.updateUser.bind(this);
+    this.successUpdate = this.successUpdate.bind(this);
+    this.listner = this.listner.bind(this);
+    window.addEventListener("DOMContentLoaded", this.createElement)
+    
+  }
+  
 
-let getAllUserBtn = document.querySelector('.getAlluser');
-let getUserByIdBtn = document.querySelector('.getUserById');
-let deleteUserBtn = document.querySelector('.deleteUser');
-let addUserBtn = document.querySelector('.addUser');
-let updateUserBtn = document.querySelector('.updateUser');
+  
+ createElement(){
+this.inputName.placeholder = "Enter name";
+this.inputAge.placeholder = "Enter Age";
+this.btnGet.setAttribute("type", "submit");
+this.btnGet.value = "Get Users";
+this.btnGetId.setAttribute("type", "submit");
+this.btnGetId.value = "Get Users by Id";
+this.btnDelete.setAttribute("type", "submit");
+this.btnDelete.value = "Delete User By Id";
+this.btnAdd.setAttribute("type", "submit");
+this.btnAdd.value = "Add Users";
+this.btnUpdate.setAttribute("type", "submit");
+this.btnUpdate.value = "Update User";
+this.reset.textContent = "Reset";
+body.append(this.form, this.result);
+this.form.append(this.inputName, this.inputAge, this.btnGet, this.btnGetId, this.btnDelete, this.btnAdd, this.btnUpdate, this.reset);
 
-let resultDiv = document.querySelector('.result');
-let form = document.querySelector('.search-form');
-let input = document.querySelector('[name="name"]');
-let input2 = document.querySelector('[name="age"]');
+this.form.addEventListener('click', this.listner);
+}
+getAllUsers() {
+  fetch('https://test-users-api.herokuapp.com/users/')
+    .then(res => res.json())
+    .then(data => this.createUsersList(data.data));
+}
+createUsersList(arr) {
+  let table = document.createElement('table');
+  this.result.append(table);
 
-function getAllUsers() {
+  let tr1 = document.createElement('tr');
+  table.append(tr1);
+
+  let td1 = document.createElement('th');
+  td1.textContent = 'ID';
+
+  let td2 = document.createElement('th');
+  td2.textContent = 'NAME';
+
+  let td3 = document.createElement('th');
+  td3.textContent = 'AGE';
+
+  tr1.append(td1, td2, td3);
+  for (let el of arr) {
+    let tr2 = document.createElement('tr');
+
+    let td1 = document.createElement('td');
+    td1.style.width ="400px";
+    td1.style.textAlign = "center";
+    td1.textContent = el.id;
+
+    let td2 = document.createElement('td');
+    td2.style.width = "300px";
+    td2.style.textAlign = "center";
+    td2.textContent = el.name;
+
+    let td3 = document.createElement('td');
+    td3.style.width = "300px";
+    td3.style.textAlign = "center";
+    td3.textContent = el.age;
+
+    tr2.append(td1, td2, td3);
+    table.append(tr2);
+  }
+}
+
+getUserById() {
+  event.preventDefault();
+  this.result.innerHTML = "";
+  fetch(`https://test-users-api.herokuapp.com/users/${this.inputName.value}`)
+    .then(res => res.json())
+    .then(data => this.showUserInfo(data.data))
+    .catch(() => this.result.innerHTML = "Thet user doesent exist");
+}
+
+showUserInfo(obj) {
+  if (obj.length > 0) {
+    this.result.innerHTML = "Enter valid ID";
+  } else {
+    const wrap = document.createElement('div');
+    const id = document.createElement('p');
+    const name = document.createElement('p');
+    const age = document.createElement('p');
+
+    id.textContent = `ID ${obj.id}`;
+    name.textContent = `NAME ${obj.name}`;
+    age.textContent = `AGE ${obj.id}`;
+
+    this.result.append(wrap);
+    wrap.append(id, name, age);
+  }
+}
+
+addUser() {
+//   event.preventDefault();
+  let obj = {
+      name: this.inputName.value,
+      age: this.inputAge.value,
+  };
+  fetch('https://test-users-api.herokuapp.com/users/', {
+          method: 'POST',
+          body: JSON.stringify(obj),
+          headers: {
+              "Content-type": "application/json; charset=UTF-8"
+          }
+      })
+      .then(response => response.json())
+      .then(data => this.successAdd(data))
+      .catch(error => console.log('ERROR' + error));
+}
+
+successAdd(data) {
+  if (data.status == 500) {
+      console.log(data);
+      this.result.textContent = 'Введите валидное имя пользователя(имя) и валидный возраст(число)!';
+  } else {
+      console.log(data);
+      this.result.textContent = 'Пользователь успешно добавлен!';
+  }
+}
+
+removeUser() {
     event.preventDefault();
-    resultDiv.innerHTML = '';
-    fetch('https://test-users-api.herokuapp.com/users/')
-        .then(response => response.json())
-        .then(data => createUsersList(data.data));
-}
-
-function createUsersList(arr) {
-    let table = document.createElement('table');
-    resultDiv.append(table);
-
-    let th = document.createElement('tr');
-    table.append(th);
-
-    let td1 = document.createElement('th');
-    td1.textContent = 'ID';
-
-    let td2 = document.createElement('th');
-    td2.textContent = 'NAME';
-
-    let td3 = document.createElement('th');
-    td3.textContent = 'AGE';
-
-    th.append(td1, td2, td3);
-    for (let e of arr) {
-        let tr = document.createElement('tr');
-
-        let td1 = document.createElement('td');
-        td1.textContent = e.id;
-
-        let td2 = document.createElement('td');
-        td2.textContent = e.name;
-
-        let td3 = document.createElement('td');
-        td3.textContent = e.age;
-
-        tr.append(td1, td2, td3);
-        table.append(tr);
-    }
-}
-getAllUserBtn.addEventListener('click', getAllUsers);
-
-
-function getUserById() {
-    event.preventDefault();
-    resultDiv.innerHTML = '';
-    fetch(`https://test-users-api.herokuapp.com/users/${input.value}`)
-        .then(res => res.json())
-        .then(data => showUserInfo(data.data))
-        .catch(() => {
-            resultDiv.textContent = 'Такого пользователя в списке нет! Введите валидное ID пользователя.';
-        });
-}
-
-function showUserInfo(obj) {
-    if (obj.length > 0) {
-        resultDiv.textContent = 'Введите валидное ID пользователя!';
-    } else {
-        let wrap = document.createElement('div');
-        resultDiv.append(wrap);
-
-        let id = document.createElement('p');
-        id.textContent = `Id: ${obj.id}`;
-
-        let name = document.createElement('p');
-        name.textContent = `Name: ${obj.name}`;
-
-        let age = document.createElement('p');
-        age.textContent = `Age: ${obj.age}`;
-
-        wrap.append(id, name, age);
-    }
-}
-getUserByIdBtn.addEventListener('click', getUserById);
-
-
-
-function addUser() {
-    event.preventDefault();
-    let nameP = input.value;
-    let ageP = input2.value;
-    let obj = {
-        name: nameP,
-        age: ageP,
-    };
-    fetch('https://test-users-api.herokuapp.com/users/', {
-            method: 'POST',
-            body: JSON.stringify(obj),
-            headers: {
-                "Content-type": "application/json; charset=UTF-8"
-            }
-        })
-        .then(response => response.json())
-        .then(data => successAdd(data))
-        .catch(error => console.log('ERROR' + error));
-}
-addUserBtn.addEventListener('click', addUser);
-
-function successAdd(data) {
-    if (data.status == 500) {
-        console.log(data);
-        resultDiv.textContent = 'Введите валидное имя пользователя(имя) и валидный возраст(число)!';
-    } else {
-        console.log(data);
-        resultDiv.textContent = 'Пользователь успешно добавлен!';
-    }
-}
-
-
-function removeUser() {
-    event.preventDefault();
-    fetch(`https://test-users-api.herokuapp.com/users/${input.value}`, {
+    fetch(`https://test-users-api.herokuapp.com/users/${this.inputName.value}`, {
             method: 'DELETE'
         })
         .then(response => response.json())
-        .then((data) => successDelete(data))
-        .catch(error => console.log('ERROR' + error));
-}
-deleteUserBtn.addEventListener('click', removeUser);
-
-function successDelete(data) {
-    if (data.data === null || data.status === 500 || data.status === 404) {
-        console.log(data.data);
-        resultDiv.textContent = 'Пользователя с таким ID не существует!';
-    } else {
-        console.log(data);
-        resultDiv.textContent = 'Пользователь успешно удален!';
-    }
-}
-
-
-
-function updateUser() {
-    event.preventDefault();
-    let userName = input2.value;
-    let userAge = Math.floor(Math.random() * 76);
-    let obj = {
-        name: userName,
-        age: userAge,
-    };
-    fetch(`https://test-users-api.herokuapp.com/users/${input.value}`, {
-            method: 'PUT',
-            body: JSON.stringify(obj),
-            headers: {
-                "Content-type": "application/json; charset=UTF-8"
-            }
-        })
-        .then(resolve => resolve.json())
-        .then(data => successUpdate(data))
+        .then((data) => this.successDelete(data))
         .catch(error => console.log('ERROR' + error));
 }
 
-function successUpdate(data) {
-    if (data.status === 404) {
-        console.log(data.data);
-        resultDiv.textContent = 'Пользователя с таким ID не существует!';
-    } else {
-        console.log(data);
-        resultDiv.textContent = 'Данные пользователя успешно изменены!';
-    }
+successDelete(data) {
+  if (data.data === null || data.status === 500 || data.status === 404) {
+      console.log(data.data);
+      this.result.textContent = 'Пользователя с таким ID не существует!';
+  } else {
+      console.log(data);
+      this.result.textContent = 'Пользователь успешно удален!';
+  }
 }
-updateUserBtn.addEventListener('click', updateUser);
+
+updateUser() {
+  event.preventDefault();
+  let userAge = Math.floor(Math.random() * 100);
+  let obj = {
+      name: this.inputName.value,
+      age: userAge,
+  };
+  fetch(`https://test-users-api.herokuapp.com/users/${this.inputAge.value}`, {
+          method: 'PUT',
+          body: JSON.stringify(obj),
+          headers: {
+              "Content-type": "application/json; charset=UTF-8"
+          }
+      })
+      .then(resolve => resolve.json())
+      .then(data => this.successUpdate(data))
+      .catch(error => console.log('ERROR' + error));
+}
+
+successUpdate(data) {
+  if (data.status === 404) {
+      console.log(data.data);
+      this.result.textContent = 'Пользователя с таким ID не существует!';
+  } else {
+      console.log(data);
+      this.result.textContent = 'Данные пользователя успешно изменены!';
+  }
+}
+
+
+listner({target}){
+  event.preventDefault();
+  if(target.value === "Get Users"){
+    this.getAllUsers();
+  }else if(target.value === "Get Users by Id"){
+    this.getUserById();
+  }else if(target.value === "Delete User By Id"){
+    this.removeUser();
+  }else if(target.value === 'Update User'){
+    this.updateUser();
+  }else if (target.value === "Add Users"){
+    this.addUser();
+  }else{
+    if(target.textContent === "Reset") location.reload();
+  }
+}
+
+}
+
+const request = new Req();
+
+
