@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Module 11</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    
+<div class="list"></div>
+
+    <template id="box">
+        {{#each this}}
+        {{#if done}}
+        <img src="{{img}}" alt="Hulk" width="300" height="300" >
+        <h1 class="name">Name: {{name}}</h1>
+        <p class="about">About: {{about}}</p>
+        <p class="work">Work: {{work}}</p>
+        {{/if}}
+        {{/each}}
+    </template>
+
+
+    <!-- /^[a-z]{2,}\s[a-z]{2,}$/ig -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+    <script src="./JS/index.js"></script>
+</body>
+</html>

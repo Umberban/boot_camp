@@ -1,0 +1,13 @@
+.profile {
+  border: solid black 1px;
+  text-align: center;
+  width: 20%;
+  margin: 50px auto;
+  list-style: none;
+  line-height: 30px;
+}
+
+.container {
+  display: flex;
+
+}

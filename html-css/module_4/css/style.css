@@ -5,9 +5,9 @@
 }
 
 .main {
-    width: 100%;
+    /* width: 100%; */
     font-family: 'Roboto', sans-serif;
-    padding-bottom: 40px;
+    padding: 40px;
 }
 
 .wrapper {
@@ -21,7 +21,7 @@ header {
 }
 
 .logo {
-    float: left;
+    /* float: left; */
     font-size: 30px;
     font-weight: 100;
     text-transform: uppercase;
@@ -34,19 +34,22 @@ header {
     color: #00e0d0;
 }
 
-.klearfix::after {
+/* .klearfix::after {
     content: '';
     display: table;
     clear: both;
-}
+} */
 
 .menu {
-    float: right;
-    
+    /* float: right; */
+    display: flex;
+    width: 40%;
+    justify-content: space-between;
+
 }
 
 .menu li {
-    float: left;
+    /* float: left; */
     list-style: none;
     margin-left: 20px
 }
@@ -65,6 +68,8 @@ header {
 
 .menu1 {
     margin-bottom: 105px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .products {
@@ -84,10 +89,13 @@ header {
 
 .things {
     width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .things li {
-    float: left;
+    /* float: left; */
     list-style: none;
     max-width: 255px;
     margin: 15px;
@@ -102,47 +110,47 @@ header {
     display: block;
     height: 282px;
     background-color: #e9f0fd;
-    width:255px;
+    width: 255px;
     margin: auto;
 }
 
 .pic1 {
     width: 180px;
-    height:255px;
+    height: 255px;
 }
 
 .pic2 {
     width: 180px;
-    height:246px;
+    height: 246px;
 }
 
 .pic3 {
     width: 180px;
-    height:158px;
+    height: 158px;
 }
 
 .pic4 {
     width: 180px;
-    height:204px;
+    height: 204px;
 }
 
 .pic5 {
     width: 180px;
-    height:213px;
+    height: 213px;
 }
 
 .pic6 {
     width: 180px;
-    height:180px;
+    height: 180px;
 }
 
 .pic7 {
     width: 180px;
-    height:240px;
+    height: 240px;
 }
 
 .pic8 {
-    height:282px;
+    height: 282px;
     padding-top: 50px;
     background-color: #e9f0fd;
     width: 255px;
@@ -152,7 +160,7 @@ header {
 
 .pic9 {
     width: 180px;
-    height:98px;
+    height: 98px;
     margin: auto;
 }
 
@@ -174,7 +182,7 @@ header {
     max-width: 255px;
 }
 
-.price1  {
+.price1 {
     width: 53px;
     background-color: #32323279;
     color: #ffffff;
@@ -208,7 +216,7 @@ p:hover {
 
 
 .news {
-    font-size:48px;
+    font-size: 48px;
     color: #555252;
 }
 

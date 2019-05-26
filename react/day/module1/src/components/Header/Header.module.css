@@ -1,0 +1,13 @@
+.header {
+  width: 100%;
+  background: #BADA55;
+  color: #fff;
+  padding: 20px;
+  margin: auto;
+  text-align: center;
+
+}
+
+.header span {
+  font-size: 40px;
+}
