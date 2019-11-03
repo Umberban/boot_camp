@@ -1,14 +1,16 @@
-h1:hover {
-  font-size: 50px;
-  color: blueviolet;
-  transition: all 2s ease;
+ul {
+  display: flex;
+  justify-content: space-around;
 }
 
-img:hover {
-  transition: all 2s ease;
-  transform: rotate(360deg);
+.tist {
+  display: flex;
+  justify-content: space-around;
 }
 
-body {
-  text-align: center;
+img {
+  width: 100%;
+}
+.tist > div {
+  width: 40%;
 }
