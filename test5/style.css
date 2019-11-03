@@ -1,6 +1,15 @@
 ul {
   display: flex;
   justify-content: space-around;
+  list-style: none;
+  text-transform: uppercase;
+  color: gray;
+}
+
+ul > li:hover {
+  color: aqua;
+  transition: ease 1s all;
+  cursor: pointer;
 }
 
 .tist {
@@ -13,4 +22,20 @@ img {
 }
 .tist > div {
   width: 40%;
+}
+
+.sub {
+  text-transform: uppercase;
+  color: gray;
+}
+
+button {
+  background-color: #fff;
+  border: solid gray 2px;
+  width: 150px;
+  line-height: 50px;
+  display: block;
+  margin: auto;
+  color: gray;
+  font-size: 25px;
 }
