@@ -1,0 +1,32 @@
+.form {
+  display: flex;
+  justify-content: space-between;
+  width: 40rem;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
+
+.form input {
+  width: 12rem;
+  border: none;
+  outline: 1px solid #ccc;
+  font-size: 1rem;
+  padding: 0 0.5rem;
+  height: 3rem;
+}
+
+.form button {
+  width: 8rem;
+  background-color: #3498db;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: #fff;
+  cursor: pointer;
+}
+
+.form button:hover {
+  transition: all 0.5s linear;
+  background-color: #2980b9;
+}

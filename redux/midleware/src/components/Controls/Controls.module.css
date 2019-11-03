@@ -1,0 +1,12 @@
+.controlsButtons {
+  width: 5rem;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.6rem;
+}
+
+.add {
+  margin: 0 auto;
+  display: block;
+  width: 3rem;
+}
